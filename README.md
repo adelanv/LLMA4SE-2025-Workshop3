@@ -39,7 +39,7 @@ git clone https://github.com/adelanv/LLMA4SE-2025-Workshop3.git
    
 
 3) Create a virtual environment to ensure the correct dependencies
-    2.1) Using pip
+    3.1) Using pip
    ```bash
     python3 -m venv .venv
 
@@ -52,7 +52,7 @@ git clone https://github.com/adelanv/LLMA4SE-2025-Workshop3.git
 
    source ./.venv/Scripts/activate
     ```
-    2.2) Using uv
+    3.2) Using uv
 
    ```bash
    uv sync
