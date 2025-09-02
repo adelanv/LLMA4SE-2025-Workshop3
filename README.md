@@ -20,26 +20,87 @@ We present two options to run the experiments below, using cloud resources and h
 4) Go to step **Connect to Neo4J and Verify Setup** below to connect to your graph database. 
 
 
-#### Alternative 2: Run on local machine 
+### Alternative 2: Run on local machine
 
-**Required**: Git, Docker Desktop, VSCode
-
-1) Clone the GitHub repository on your computer from following link:
+1) Make sure python >3.10 is installed on your machine, and is on your PATH
+   ```https://realpython.com/add-python-to-path/```
+   
+1) Save the workshop directory content locally on your machine or clone the GitHub repository:
 
 ```
 git clone https://github.com/adelanv/LLMA4SE-2025-Workshop3.git
 ```
 
-2) Install Docker Desktop on your computer, following the link: https://www.docker.com/%20products/docker-desktop/ then run Docker Desktop.
+2) Create a virtual environment to ensure the correct dependencies
+    2.1) Using pip
+   ```bash
+    python3 -m venv .venv
 
-3) Open a terminal, navigate to the repository directory where the *docker-compose.yml* file is located and run the following command:
+    # For linux
+   source .venv/bin/activate
+    # On windows the activate script is located under the ./venv/Scripts/ folder, so with powershell:
+   .\.venv\Scripts\activate
+
+    # Or with git bash if installed
+
+   source ./.venv/Scripts/activate
+    ```
+    2.2) Using uv
+
+   ```bash
+   uv sync
+       # For linux
+   source .venv/bin/activate
+    # On windows the activate script is located under the ./venv/Scripts/ folder, so with powershell:
+   .\.venv\Scripts\activate
+
+    # Or with git bash if installed
+
+   source ./.venv/Scripts/activate
+    ```
+
+   
+2) Inside the directory create a *openaiapi.ini* file, add the following lines, and replace with your OpenAI API key:
+
+```
+[openai]
+OPENAI_API_KEY = sk-xxxx-xxxx ...
+```
+Inside the notebook, you may add the following code to access your OpenAI API key:
+
+```
+import configparser
+
+config = configparser.ConfigParser(allow_no_value = True)
+config.read('openaiapi.ini')
+openai_api_key = config.get('openai', 'OPENAI_API_KEY')
+```
+
+3) Install Docker Desktop on your computer, following the link: https://www.docker.com/%20products/docker-desktop/ then run Docker Desktop.
+
+6) Open a terminal, navigate to the repository directory containing the *docker-compose.yml* file and run the following command:
 
 ```
 docker-compose up -d
 ```
-This is done to start all the containers, build images, and set up volumes. 
+5) Run the code blocks in a Jupyter Notebook-friendly editor or with jupyter lab
+    5.1) Visual Studio Code
+        Open the project folder and set the virtual environment as the default interpreter.
 
-4) Open an editor and run the code blocks in a Jupyter Notebook-friendly editor (such as VSCode).
+    5.2) If jupyter lab is installed
+
+       ```bash
+        jupyter lab
+
+       ```
+    or if you need to specify python version (for example version 3.11):
+
+   ```bash
+   py -3.11 -m jupyter lab
+
+   ```
+
+7) 
 ____________________________________________________________________
 
 ###  Virtual Environment
