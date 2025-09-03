@@ -65,6 +65,7 @@ git clone https://github.com/adelanv/LLMA4SE-2025-Workshop3.git
 
    source ./.venv/Scripts/activate
     ``` 
+  **If you use uv inside VSCode:** `uv pip install -r requirements.txt`
 
 4) Install Docker Desktop on your computer, following the link: https://www.docker.com/%20products/docker-desktop/ then run Docker Desktop.
 
