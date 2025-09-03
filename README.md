@@ -5,9 +5,9 @@
 
 ____________________________________________________________________
 ### How to run?
-We present two options to run the experiments below, using cloud resources and hosted database instance or running locally using Docker containers (for local models, Ollama configuration is provided). For simplicity, this workshop walkthorough will be run on the cloud.
+We present two options to run the experiments, using cloud resources and a fully hosted database instance or by running locally using Docker container. 
 
-#### Alternative 1: Run on cloud - **Followed in this workshop!**
+#### Alternative 1: Run on cloud
 
 **Required**: Google account, Neo4J Aura account
 
@@ -15,7 +15,7 @@ We present two options to run the experiments below, using cloud resources and h
 
 2) Sign in with your Google account.
 
-3) Open the invitation link (TODO: ADD). In the menu bar, go to File → Save a copy in Drive. This will create your own personal copy of the notebook.
+3) Download the notebooks from https://github.com/adelanv/LLMA4SE-2025-Workshop3.git and open them in Google Colab. 
 
 4) Create a free Neo4j AuraDB account following the link provided: https://neo4j.com/docs/aura/classic/. This is done to obtain a cloud-based, personal database instance for the experiments.
 
@@ -24,9 +24,9 @@ We present two options to run the experiments below, using cloud resources and h
 Lastly, open the Neo4J Aura Console and navigate to *Data services/Instances*. Create a new database instance (if not automatically created). 
 
 
-### Alternative 2: Run on local machine
+### Alternative 2: Run on local machine (We follow this in this workshop!)
 
-**Required**: Git, Docker Desktop, VSCode, *Ollama (*for local models)
+**Required**: Git, Docker Desktop, VSCode, *Ollama (*for local models - but not necessary for this workshop)
 
 1) Clone the GitHub repository on your computer from following link:
 
@@ -64,7 +64,7 @@ git clone https://github.com/adelanv/LLMA4SE-2025-Workshop3.git
     # Or with git bash if installed
 
    source ./.venv/Scripts/activate
-    ```
+    ``` 
 
 4) Install Docker Desktop on your computer, following the link: https://www.docker.com/%20products/docker-desktop/ then run Docker Desktop.
 
