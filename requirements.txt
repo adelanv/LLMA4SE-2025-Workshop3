@@ -1,0 +1,8 @@
+neo4j
+autogen-agentchat
+autogen-ext[openai,ollama,chromadb]
+aiohttp
+nbclient
+arxiv
+pydantic
+aiofiles
